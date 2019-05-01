@@ -551,20 +551,23 @@ img {
 }
 
 @media (max-width: 1199px) {
-  .catalog-wrapper {
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-  }
   .catalog-card {
     max-width: 470px;
   }
 }
 
-@media (max-width: 375px) {
+@media (max-width: 991px) {
+  .catalog-wrapper {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+@media (max-width: 374px) {
   .catalog-card__tag {
-    top: 0;
     left: 0;
+    top: 0;
   }
 }
 

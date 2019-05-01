@@ -1,0 +1,57 @@
+.catalog
+  background-color: #f5f6f8
+  &-wrapper
+    display: flex
+    justify-content: space-between
+    flex-wrap: wrap
+  &__card
+    margin-bottom: 30px
+  &__link
+    text-align: center
+    margin-top: 60px
+  &__link-more
+    display: inline-block
+    margin-bottom: 24px
+  &__description
+    display: block
+    
+
+.catalog-card
+  position: relative
+  max-width: 570px
+  box-shadow: 7px 5px 21px rgba(0, 0, 0, 0.1)
+  &__buttons
+    display: flex
+    position: absolute
+    bottom: 0
+    right: 0
+  &__button
+    padding: 10px
+    height: 30px
+    font-size: 11px
+    text-transform: uppercase
+    border: none
+  &__tag
+    padding: 10px
+    position: absolute
+    top: 10px
+    left: 10px
+    font-size: 12px
+    text-transform: uppercase
+    color: #ffffff
+    background-color: rgba($primary, 0.6)
+  &__image
+    display: block
+
+
+@media (max-width: 1199px)
+  .catalog
+    &-wrapper
+      justify-content: center
+    &-card
+      max-width: 470px
+
+@media (max-width: 375px)
+  .catalog-card__tag
+    top: 0
+    left: 0

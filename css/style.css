@@ -121,8 +121,8 @@ body {
   background-color: #507fe1;
   -webkit-transition: 0.2s;
   transition: 0.2s;
-  -webkit-transform: translateY(-200%);
-          transform: translateY(-200%);
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
   opacity: 0;
 }
 

@@ -1,0 +1,17 @@
+.features
+  &-wrapper
+    display: flex
+    flex-wrap: wrap
+  &__item
+    width: 33.33%
+    text-align: center
+    margin-bottom: 100px
+
+@media (max-width: 991px)
+  .features__item
+      flex-basis: 50%
+
+@media (max-width: 768px)
+  .features__item
+      flex-basis: 100%
+      margin-bottom: 50px

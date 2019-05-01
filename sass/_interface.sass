@@ -2,6 +2,16 @@ body
   +regular
   color: $text-color
 
+.section
+  padding: 100px 0
+  &-title
+    font-size: 30px
+    text-align: center
+    text-transform: uppercase
+    +bold
+  &__title
+    margin-bottom: 100px
+
 .button-o
   background-color: inherit
   border: 2px solid $primary
@@ -50,3 +60,9 @@ body
 @media (max-width: 576px)
   .button-o
     font-size: 10px
+  
+  .section
+    padding: 60px 0
+    &-title
+      font-size: 24px
+      

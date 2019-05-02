@@ -1,0 +1,42 @@
+
+.steps
+  background-color: #f1f1f1
+  &-wrapper
+    display: flex
+    justify-content: space-between
+    flex-wrap: wrap
+
+.step
+  position: relative
+  text-align: center
+  &__title
+    font-size: 18px
+  &__text
+    max-width: 160px
+  &::before
+    content: ''
+    position: absolute
+    display: block
+    width: 100%
+    height: 2px
+    background-color: rgba(#7e7b78, 0.7)
+    display: block
+    top: 25%
+    right: -63%
+  &:last-child::before
+    display: none
+
+@media (max-width: 991px)
+  .step
+    width: 33.33%
+    &__text
+      margin: auto
+      margin-bottom: 25px
+    &::before
+      display: none
+@media (max-width: 768px)
+  .step
+    width: 50%
+@media (max-width: 400px)
+    .step
+      width: 100%

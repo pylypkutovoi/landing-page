@@ -909,10 +909,50 @@ img {
     margin-bottom: 20px;
   }
   .factory__text {
-    margin-left: 0;
+    margin: 0;
     padding: 0 20px;
     -ms-flex-preferred-size: 100%;
         flex-basis: 100%;
+  }
+}
+
+.contacts-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.contacts__item {
+  text-align: center;
+}
+
+.contacts__image {
+  margin-bottom: 25px;
+}
+
+.contacts__text {
+  font-size: 16px;
+}
+
+.contacts__link {
+  text-decoration: none;
+  color: #262626;
+}
+
+.contacts__address {
+  font-style: normal;
+  max-width: 200px;
+  margin: auto;
+}
+
+@media (max-width: 576px) {
+  .contacts__item {
+    width: 100%;
+    margin-bottom: 25px;
   }
 }
 /*# sourceMappingURL=style.css.map */

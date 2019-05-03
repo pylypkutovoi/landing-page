@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AACG,AAAD,iBAAS,CAAC;EACR,OAAO,EAAE,IAAI;EACb,eAAe,EAAE,aAAa;EAC9B,SAAS,EAAE,IAAI;CAAG",
+    "sources": [
+        "../sass/blocks/contacts.sass"
+    ],
+    "names": [],
+    "file": "contacts.css"
+}

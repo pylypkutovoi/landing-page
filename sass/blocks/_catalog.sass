@@ -20,11 +20,15 @@
   position: relative
   max-width: 570px
   box-shadow: 7px 5px 21px rgba(0, 0, 0, 0.1)
+  overflow-y: hidden
   &__buttons
     display: flex
     position: absolute
     bottom: 0
     right: 0
+    opacity: 0
+    transform: translateY(100%)
+    transition: 0.2s
   &__button
     padding: 10px
     height: 30px
@@ -43,6 +47,10 @@
   &__image
     display: block
 
+.catalog-card:hover
+  .catalog-card__buttons
+    opacity: 1
+    transform: translateY(0)
 
 @media (max-width: 1199px)
   .catalog-card

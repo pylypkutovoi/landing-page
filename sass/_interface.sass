@@ -61,6 +61,42 @@ img
   &:checked + label::before
     background-color: $primary
 
+.select
+  position: relative
+  height: 80px
+  border: 1px solid #dddddd
+  &:after
+    position: absolute
+    content: ''
+    top: 50%
+    transform: translateY(-50%)
+    right: 20px
+    width: 20px
+    height: 20px
+    background: url('../img/arrow_down.png') no-repeat center
+  &:hover
+    cursor: pointer
+  &--checked
+    line-height: 80px
+    padding-left: 30px
+  &__dropdown
+    position: absolute
+    display: none
+    top: 80px
+    width: 100%
+    background-color: #ffffff
+    border: 1px solid #dddddd
+    margin: 0
+    padding: 0
+    list-style: none
+    &--open
+      display: block
+  &__option
+    padding: 20px
+    &:hover
+      background-color: darken(#f1f1f1, 5)
+
+
 .checkbox__label
   display: flex
   align-items: center

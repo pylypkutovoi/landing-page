@@ -17,11 +17,11 @@
         <nav class="menu__nav">
             <a href="#" class="menu__link">Главная</a>
             <a href="#" class="menu__link">Продукция</a>
-            <a href="#" class="menu__link">Каталог</a>
+            <a href="#catalog" class="menu__link">Каталог</a>
             <a href="#" class="menu__link">Примеры работ</a>
             <a href="#" class="menu__link">Примерка изображения</a>
-            <a href="#" class="menu__link">Стоимость дилерам</a>
-            <a href="#" class="menu__link">О Скинали</a>
+            <a href="#price" class="menu__link">Стоимость дилерам</a>
+            <a href="#about" class="menu__link">О Скинали</a>
         </nav>
       </div>
     </div>
@@ -47,7 +47,7 @@
             <a class="navbar__phone" href="tel:+79123235567">+7 912 323-55-67</a>
             <a class="navbar__email navbar__small-text" href="mailto:info@mail.cu">info@mail.cu</a>
           </div>
-          <button class="button-o navbar__button">Получить консультацию</button>
+          <a href="#consult" class="button-o navbar__button">Получить консультацию</a>
         </div>
       </div>
     </div>
@@ -56,7 +56,7 @@
       <div class="container">
         <h1 class="hero__title">Гарантия минимальной цены на скинали</h1>
         <span class="hero__subtitle">от 3 000 р/м2</span>
-        <button class="button hero__button">Заказать скинали</button>
+        <a href="#consult" class="button hero__button">Заказать скинали</a>
       </div>
     </div>
     <!-- /.hero -->
@@ -64,7 +64,7 @@
   <!-- /.header -->
 
   <main>
-    <section class="offer bg-secondary">
+    <section class="offer bg-secondary" id="consult">
       <div class="container">
         <div class="offer__block offer__block--price">
           <h2 class="offer__title">Оставить заявку на расчёт</h2>
@@ -73,7 +73,14 @@
             <div class="form__row">
               <div class="form__group">
                 <label for="" class="form__label">Вид стекла</label>
-                <input type="text" class="input form__input" />
+                <input type="hidden" id="select-type" />
+                <div class="select form__select">
+                  <div class="select--checked">С печатью</div>
+                  <ul class="select__dropdown">
+                    <ul class="select__option" data-value="С печатью">С печатью</ul>
+                    <ul class="select__option" data-value="Без печати">Без печати</ul>
+                  </ul>
+                </div>
               </div>
               <div class="form__group">
                 <label for="" class="form__label">Ширина, см</label>
@@ -146,7 +153,7 @@
       </div>
     </section>
 
-    <section class="section catalog">
+    <section class="section catalog" id="catalog">
       <div class="container">
         <h2 class="section-title section__title">Каталог скинали</h2>
         <div class="catalog-wrapper">
@@ -273,7 +280,7 @@
       </div>
     </section>
 
-    <section class="section price">
+    <section class="section price" id="price">
       <div class="container">
         <h2 class="section-title section__title">Цены и виды скинали</h2>
         <div class="price-wrapper">
@@ -492,7 +499,7 @@
         </div>
     </section>
 
-    <section class="section factory">
+    <section class="section factory" id="about">
       <div class="container">
         <h2 class="section-title section__title">
           О производстве
@@ -581,20 +588,7 @@
   <script src="js/jquery.event.move.js"></script>
   <script src="js/jquery.twentytwenty.js"></script>
   <script src="js/slick.min.js"></script>
-  <script>
-    $(window).load(function() {
-
-      $(".before-after").twentytwenty({
-        before_label: 'без скинали',
-        after_label: 'со скинали'
-      });
-      $('.before-slider').slick({
-        draggable: false,
-        dots: true,
-        dotsClass: 'before-slider__dots'
-      });
-    });
-  </script>
+  <script src="js/main.js"></script>
   
 </body>
 </html>

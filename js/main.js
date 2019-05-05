@@ -4,10 +4,17 @@ $(window).load(function() {
     before_label: 'без скинали',
     after_label: 'со скинали'
   });
+
   $('.before-slider').slick({
     draggable: false,
     dots: true,
     dotsClass: 'before-slider__dots'
+  });
+
+  $('.reviews-slider').slick({
+    draggable: false,
+    dots: true,
+    dotsClass: 'reviews-slider__dots'
   });
 
   $('.menu-button').on('click', function (e) {
@@ -20,8 +27,8 @@ $(window).load(function() {
   })
 
   // Selector
-  
-	$('.form__group').on('click', function() {
+
+	$('.form__select').on('click', function() {
 		$('.select__dropdown').toggleClass('select__dropdown--open');
   });
   
@@ -32,4 +39,6 @@ $(window).load(function() {
 		$('.select__dropdown').toggleClass('select__dropdown--open');
 	});
 });
+
+
 

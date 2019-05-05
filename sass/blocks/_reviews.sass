@@ -1,9 +1,34 @@
 .reviews
-  background-color: #f1f1f1
-  display: none
+  background-color: #f6f7f9
+  // display: none
 .reviews-slider
   display: flex
   justify-content: space-between
+  // flex-direction: column
+  &__dots
+    display: flex
+    // justify-content: center
+    // align-items: center
+    margin: auto
+    padding: 0
+    list-style: none
+    margin-top: 20px
+    position: absolute
+    left: 50%
+    transform: translateX(-50%)
+    top: -50px
+    li
+      width: 10px
+      height: 10px
+      background-color: #d1d1d1
+      border-radius: 650%
+      margin: 5px
+      &:hover
+        cursor: pointer
+      &.slick-active
+        background-color: #5b7fda
+    button
+       display: none
   &__item
     text-align: center
   &__image
@@ -31,5 +56,13 @@
       height: 10px
       border: 10px solid transparent
       border-top: 10px solid #ffffff
+
+@media (max-width: 768px)
+  .reviews-slider
+    &__text 
+      max-width: 370px
+      min-width: 0
+      margin: auto
+    
       
 

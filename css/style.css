@@ -319,6 +319,7 @@ img {
 
 .navbar {
   position: fixed;
+  z-index: 99;
   left: 0;
   top: 0;
   width: 100%;
@@ -1047,6 +1048,7 @@ img {
 
 .slick-arrow {
   position: absolute;
+  display: none;
   top: 50%;
   -webkit-transform: translateY(-100%);
           transform: translateY(-100%);
@@ -1059,18 +1061,17 @@ img {
 }
 
 .slick-prev {
-  left: -30px;
+  left: -25px;
   background: url("/img/slider/left.png") no-repeat center;
 }
 
 .slick-next {
-  right: -30px;
+  right: -25px;
   background: url("/img/slider/right.png") no-repeat center;
 }
 
 .reviews {
-  background-color: #f1f1f1;
-  display: none;
+  background-color: #f6f7f9;
 }
 
 .reviews-slider {
@@ -1080,6 +1081,41 @@ img {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+}
+
+.reviews-slider__dots {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: auto;
+  padding: 0;
+  list-style: none;
+  margin-top: 20px;
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  top: -50px;
+}
+
+.reviews-slider__dots li {
+  width: 10px;
+  height: 10px;
+  background-color: #d1d1d1;
+  border-radius: 650%;
+  margin: 5px;
+}
+
+.reviews-slider__dots li:hover {
+  cursor: pointer;
+}
+
+.reviews-slider__dots li.slick-active {
+  background-color: #5b7fda;
+}
+
+.reviews-slider__dots button {
+  display: none;
 }
 
 .reviews-slider__item {
@@ -1116,6 +1152,14 @@ img {
   height: 10px;
   border: 10px solid transparent;
   border-top: 10px solid #ffffff;
+}
+
+@media (max-width: 768px) {
+  .reviews-slider__text {
+    max-width: 370px;
+    min-width: 0;
+    margin: auto;
+  }
 }
 
 .factory-wrapper {

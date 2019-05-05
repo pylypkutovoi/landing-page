@@ -109,7 +109,29 @@ img
     width: 30px
     height: 30px
     border: 1px solid #dddddd
+.slick-arrow
+  position: absolute
+  display: none
+  top: 50%
+  transform: translateY(-100%)
+  width: 22px
+  height: 34px
+  border: none
+  outline: none
+  font-size: 0
+  cursor: pointer
+.slick-prev
+  left: -30px
+  background: url('../img/slider/left.png') no-repeat center
+.slick-next
+  right: -30px
+  background: url('../img/slider/right.png') no-repeat center
 
+@media (max-width: 576px)
+  .slick-prev
+    left: -22px
+  .slick-next
+    right: -22px
 
 @media (max-width: 576px)
   .button
